@@ -22,7 +22,7 @@ const CustomGrid: React.FC<CustomGridProps> = props => {
 
 const renderItem = (item: PostData) => {
   return (
-    <TouchableOpacity style={styles.imageTouchable}>
+    <TouchableOpacity >
       {item.isVideo ? (
         <Video
           source={{uri: item.videoUrl}}
@@ -45,16 +45,14 @@ const renderItem = (item: PostData) => {
 
 const styles = StyleSheet.create({
   image: {
-    width: DEVICE_SIZES.WIDTH / 3,
-    height:DEVICE_SIZES.WIDTH / 3,
-  },
-  flatList: {
-    width: DEVICE_SIZES.WIDTH - 10,
-  },
-  imageTouchable: {
-    width: DEVICE_SIZES.WIDTH / 3,
+    width: DEVICE_SIZES.WIDTH / 3-2,
+    height:DEVICE_SIZES.WIDTH / 3-2,
     margin: 1,
   },
+  flatList: {
+    // width: DEVICE_SIZES.WIDTH-5,
+  },
+
 });
 
 export default CustomGrid;
